@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ThreeDvideosActivity"
+    android:background="#000000">
+
+
+    <com.aadya.mylibrary.view.ZoomableRelativeLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|left"
+                android:orientation="horizontal">
+                <Space
+                    android:id="@+id/space2"
+                    android:layout_width="207dp"
+                    android:layout_height="1dp" />
+
+                <com.github.rongi.rotate_layout.layout.RotateLayout
+                    android:id="@+id/view2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:angle="270">	<!-- Specify rotate angle here -->
+                    <TextureView
+                        android:id="@+id/mVideoView2"
+                        android:layout_width="240dp"
+                        android:layout_height="150dp"
+                        android:rotation="0"/>
+                </com.github.rongi.rotate_layout.layout.RotateLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:gravity="right"
+                android:orientation="horizontal">
+                <com.github.rongi.rotate_layout.layout.RotateLayout
+                    android:id="@+id/view4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:angle="90">	<!-- Specify rotate angle here -->
+                    <TextureView
+                        android:id="@+id/mVideoView4"
+                        android:layout_width="240dp"
+                        android:layout_height="150dp"
+                        android:rotation="0"/>
+                </com.github.rongi.rotate_layout.layout.RotateLayout>
+                <Space
+                    android:id="@+id/space4"
+                    android:layout_width="207dp"
+                    android:layout_height="1dp"/><!-- 125dp  -->
+
+            </LinearLayout>
+
+            <!--<com.github.rongi.rotate_layout.layout.RotateLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="80dp"
+                app:angle="270"
+                android:visibility="visible">
+                <TextureView
+                    android:id="@+id/mVideoView4"
+                    android:layout_width="240dp"
+                    android:layout_height="150dp"
+                    android:rotation="0"/>
+            </com.github.rongi.rotate_layout.layout.RotateLayout>-->
+
+            <!--<com.github.rongi.rotate_layout.layout.RotateLayout
+                android:id="@+id/topRotateLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="200dp"
+                app:angle="0"
+                android:visibility="visible">	&lt;!&ndash; Specify rotate angle here &ndash;&gt;
+                <TextureView
+                    android:id="@+id/mVideoView1"
+                    android:layout_width="240dp"
+                    android:layout_height="150dp"
+                    android:rotation="0"/>
+            </com.github.rongi.rotate_layout.layout.RotateLayout>-->
+            <!--<com.github.rongi.rotate_layout.layout.RotateLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="200dp"
+                app:angle="180"
+                android:visibility="visible">	&lt;!&ndash; Specify rotate angle here &ndash;&gt;
+                <TextureView
+                    android:id="@+id/mVideoView3"
+                    android:layout_width="240dp"
+                    android:layout_height="150dp"
+                    android:rotation="0"/>
+
+            </com.github.rongi.rotate_layout.layout.RotateLayout>-->
+
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal">
+            <Space
+                android:id="@+id/space1"
+                android:layout_width="1dp"
+                android:layout_height="490dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"/><!-- screenHeight(700)+ video width -->
+
+            <com.github.rongi.rotate_layout.layout.RotateLayout
+                android:id="@+id/view1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/space1"
+                android:layout_centerHorizontal="true"
+                app:angle="0">	<!-- Specify rotate angle here -->
+                <TextureView
+                    android:id="@+id/mVideoView1"
+                    android:layout_width="240dp"
+                    android:layout_height="150dp"
+                    android:rotation="0"/>
+            </com.github.rongi.rotate_layout.layout.RotateLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal">
+            <Space
+                android:id="@+id/space3"
+                android:layout_width="1dp"
+                android:layout_height="490dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true"/><!-- screenHeight(700)+ video width -->
+
+            <com.github.rongi.rotate_layout.layout.RotateLayout
+                android:id="@+id/view3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/space3"
+                android:layout_centerHorizontal="true"
+                app:angle="180">	<!-- Specify rotate angle here -->
+                <TextureView
+                    android:id="@+id/mVideoView3"
+                    android:layout_width="240dp"
+                    android:layout_height="150dp"
+                    android:rotation="0"/>
+            </com.github.rongi.rotate_layout.layout.RotateLayout>
+        </RelativeLayout>
+    </com.aadya.mylibrary.view.ZoomableRelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="4"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+        <!--<FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:background="@drawable/button_back"
+            android:onClick="button1Click">
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/i2"
+                android:scaleType="centerInside"/>
+            <ImageView
+                android:layout_width="31dp"
+                android:layout_height="31dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/i1"
+                android:scaleType="centerInside"/>
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:background="@drawable/button_back"
+            android:onClick="button2Click">
+            <ImageView
+                android:layout_width="31dp"
+                android:layout_height="31dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/i1"
+                android:scaleType="centerInside"/>
+            <ImageView
+                android:layout_width="31dp"
+                android:layout_height="31dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/i2"
+                android:scaleType="centerInside"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:background="@drawable/button_back"
+            android:onClick="button3Click">
+            <ImageView
+                android:layout_width="31dp"
+                android:layout_height="31dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="17dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/i3"
+                android:scaleType="centerInside"/>
+            <ImageView
+                android:layout_width="31dp"
+                android:layout_height="31dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="17dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/i4"
+                android:scaleType="centerInside"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:background="@drawable/button_back"
+            android:onClick="button4Click">
+            <ImageView
+                android:layout_width="31dp"
+                android:layout_height="31dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="17dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/i4"
+                android:scaleType="centerInside"/>
+            <ImageView
+                android:layout_width="31dp"
+                android:layout_height="31dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="17dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/i3"
+                android:scaleType="centerInside"/>
+        </FrameLayout>-->
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:src="@drawable/m1"
+            android:scaleType="fitCenter"
+            android:background="@drawable/button_back"
+            android:onClick="button1Click"/>
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:src="@drawable/m2"
+            android:scaleType="fitCenter"
+            android:background="@drawable/button_back"
+            android:onClick="button2Click"/>
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:src="@drawable/m3"
+            android:scaleType="fitCenter"
+            android:background="@drawable/button_back"
+            android:onClick="button3Click"/>
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:src="@drawable/m4"
+            android:scaleType="fitCenter"
+            android:background="@drawable/button_back"
+            android:onClick="button4Click"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:layout_margin="3dp"
+            android:text="5"
+            android:onClick="button5Click"/>
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>
